@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lumina Boutique | Local Luxury Clothing</title>
+    <meta name="description" content="Discover premium local fashion, jewelry, and accessories at Lumina Boutique.">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <a href="#" class="logo">LUMINA.</a>
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="collections.html">Collections</a></li>
+                <li><a href="#about">Our Story</a></li>
+                <li><a href="#visit">Visit</a></li>
+                <li><a href="#" class="cart-icon" onclick="toggleCart(event)">Cart (<span id="cart-count">0</span>)</a></li>
+            </ul>
+            <div class="nav-extra">
+                <a href="#visit" class="btn primary">Visit Us</a>
+            </div>
+            <div class="menu-toggle" id="mobile-menu">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </div>
+    </nav>
+
+    <header class="hero" id="home">
+        <div class="hero-content reveal">
+            <h1 class="hero-title">Elevate Your Everyday <span class="highlight">Elegance</span></h1>
+            <p class="hero-subtitle">Curated fashion for the modern muse. Locally sourced, globally inspired.</p>
+            <div class="hero-actions">
+                <a href="#collections" class="btn primary">Shop the Collection</a>
+                <a href="#about" class="btn secondary">Discover Lumina</a>
+            </div>
+        </div>
+    </header>
+
+    <section class="features">
+        <div class="feature-wrap reveal">
+            <div class="feature-item">
+                <h3>Curated Styles</h3>
+                <p>Hand-picked seasonal collections.</p>
+            </div>
+            <div class="feature-item">
+                <h3>Local Artisans</h3>
+                <p>Supporting local talent and jewelry makers.</p>
+            </div>
+            <div class="feature-item">
+                <h3>Personal Styling</h3>
+                <p>Book a 1-on-1 session with our fashion experts.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="collections" id="collections">
+        <div class="section-header reveal">
+            <h2>Featured Collections</h2>
+            <p>Explore this season's most coveted pieces, available exclusively in-store.</p>
+        </div>
+        
+        <div class="collection-grid">
+            <!-- Card 1 -->
+            <div class="card reveal-card">
+                <div class="card-image bg-img-1"></div>
+                <div class="card-content glassmorphism">
+                    <h3>Midnight Silk</h3>
+                    <p>Evening wear that makes a statement.</p>
+                    <a href="collections.html" class="link-btn">View Pieces &rarr;</a>
+                </div>
+            </div>
+            <!-- Card 2 -->
+            <div class="card reveal-card">
+                <div class="card-image bg-img-2"></div>
+                <div class="card-content glassmorphism">
+                    <h3>Autumn Essentials</h3>
+                    <p>Cozy knits and layered textures.</p>
+                    <a href="collections.html" class="link-btn">View Pieces &rarr;</a>
+                </div>
+            </div>
+            <!-- Card 3 -->
+            <div class="card reveal-card">
+                <div class="card-image bg-img-3"></div>
+                <div class="card-content glassmorphism">
+                    <h3>Artisan Jewelry</h3>
+                    <p>Handcrafted accessories to complete your look.</p>
+                    <a href="collections.html" class="link-btn">View Pieces &rarr;</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="split-section" id="about">
+        <div class="split-image reveal-left js-reveal">
+            <div class="img-wrapper bg-img-4"></div>
+        </div>
+        <div class="split-text reveal-right js-reveal">
+            <h2>The Lumina Story</h2>
+            <p>Founded in 2021, Lumina Boutique was born from a desire to bring high-end, sustainable fashion to our local community. We believe clothing is an extension of your identity.</p>
+            <p>Every piece in our store is carefully selected for its quality, ethical production, and timeless style. When you shop with us, you're not just buying clothes—you're investing in craftsmanship.</p>
+            <a href="#visit" class="btn outline">Get Directions</a>
+        </div>
+    </section>
+
+    <footer id="visit">
+        <div class="footer-container reveal">
+            <div class="footer-col">
+                <a href="#" class="footer-logo">LUMINA.</a>
+                <p>Your local destination for mindful, luxury fashion.</p>
+            </div>
+            <div class="footer-col">
+                <h4>Visit Us</h4>
+                <p>123 Style Avenue<br>Fashion District<br>Cityville, ST 12345</p>
+            </div>
+            <div class="footer-col">
+                <h4>Hours</h4>
+                <p>Mon-Fri: 10am - 7pm<br>Sat: 10am - 6pm<br>Sun: Closed</p>
+            </div>
+            <div class="footer-col newsletter">
+                <h4>Newsletter</h4>
+                <p>Join our list for exclusive in-store events.</p>
+                <form class="subscribe-form" action="#" onsubmit="event.preventDefault();">
+                    <input type="email" placeholder="Your email address" required>
+                    <button type="submit">&rarr;</button>
+                </form>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 Lumina Boutique. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+
+    <!-- Cart Sidebar -->
+    <div id="cart-sidebar" class="cart-sidebar">
+        <div class="cart-header">
+            <h2>Your Cart</h2>
+            <button class="close-cart" onclick="toggleCart(event)">&times;</button>
+        </div>
+        <div class="cart-items" id="cart-items">
+            <!-- Cart items will be injected here -->
+            <p class="empty-cart">Your cart is empty.</p>
+        </div>
+        <div class="cart-footer">
+            <div class="cart-total">
+                <span>Total:</span>
+                <span id="cart-total-price">$0.00</span>
+            </div>
+            <button class="btn primary" style="width: 100%; margin-top: 1rem;">Checkout</button>
+        </div>
+    </div>
+    <div id="cart-overlay" class="cart-overlay" onclick="toggleCart(event)"></div>
+</body>
+</html>
